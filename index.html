@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Train Rota</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script src="assets/trains.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron img-responsive container text-center" style="background-image: url('assets/images/775364DE-B5D9-426E-9BD8-3519D9B81B1D.JPG'); background-size: 100% 100%;">
+            
+            <div class="card-img-overlay">
+            <h1 class="text-white">Train Rota</h1>
+          
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+            <tbody  id="trainInfo">
+                
+            </tbody>
+            </table>
+
+        </div>
+    </div>
+        <br>
+        <br>
+   
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="train">Train Name</label>
+                <input type="text" class="form-control" id="trainName"  placeholder="Train Name">
+
+            </div>
+            <div class="form-group">
+                <label for="Destination">Destination</label>
+                <input type="text" class="form-control" id="destination" placeholder="City, State">
+            </div>
+            <div class="form-group">
+                <label for="startTime">First Train Time (military time HH:mm)</label>
+                <input type="text" class="form-control" id="startTime" placeholder="HH:mm">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency</label>
+                <input type="text" class="form-control" id="frequency" placeholder="Frequency">
+            </div>
+            <button id="add-train" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
